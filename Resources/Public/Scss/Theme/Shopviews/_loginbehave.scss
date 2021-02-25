@@ -1,0 +1,11 @@
+.customer-loggedin {
+  .actions-button-favorite-loggedin {
+    display: none !important;
+  }
+}
+
+.customer-notloggedin {
+  .actions-button-favorite {
+    display: none !important;
+  }
+}

@@ -1,0 +1,69 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:girard/Resources/Public/Images/logo.svg
+        fileInverted = EXT:girard/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = girard
+        linktitle = GIRARD.at – Therapiehunde mit Herz
+    }
+    logo-clicino {
+        file = EXT:girard/Resources/Public/Images/logo-clicino.svg
+        height = 52
+        width = 192
+        alt = girard
+        linktitle = GIRARD.at – Therapiehunde mit Herz
+    }
+    favicon {
+        file = EXT:girard/Resources/Public/Icons/favicon.png
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:girard/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:girard/Resources/Private/Partials/Page/
+        templateRootPath = EXT:girard/Resources/Private/Templates/Page/
+    }
+    theme{
+	    breadcrumb{
+		    enable = 0
+	    }
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:girard/Resources/Private/Layouts/
+        partialRootPath = EXT:girard/Resources/Private/Partials/
+        templateRootPath = EXT:girard/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:girard/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:girard/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:girard/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+
+///AIMEOS
+
+

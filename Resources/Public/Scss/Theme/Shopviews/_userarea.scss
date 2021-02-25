@@ -1,0 +1,131 @@
+.frame-layout-user-header {
+  position: relative;
+  .frame-inner {
+    background: white;
+    max-width: 33%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .frame-container {
+    position: relative;
+    z-index: 99;
+    transform: translateY(5rem);
+    legend {
+      display: none;
+    }
+    p {
+      padding: 2rem 2rem 0rem 2rem;
+    }
+  }
+}
+.account-profile-address .row {
+  padding: 0 !important;
+}
+.account-profile {
+  .address-billing {
+    background: $light;
+    border: none !important;
+    .form-item {
+      margin-bottom: 0;
+    }
+    .form-list {
+      margin: 2rem !important;
+    }
+    .form-list .row {
+      padding: 0 !important;
+    }
+  }
+  .panel-heading {
+    padding: 2rem !important;
+    cursor: pointer;
+  }
+  .act-show,
+  .act-hide {
+    font-size: 20px;
+    opacity: 0.5;
+    @include fast-transition();
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .act-show:after {
+    content: $lnir-pencil-alt !important;
+    display: inline-block;
+    font: normal normal normal 1em/1 "LineIconsPro Regular" !important;
+    //speak: none;
+    text-transform: none;
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary;
+    margin-left: 5px;
+  }
+  .act-hide:after {
+    content: $lnir-close !important;
+    display: inline-block;
+    font: normal normal normal 1em/1 "LineIconsPro Regular" !important;
+    //speak: none;
+    text-transform: none;
+    /* Better Font Rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $primary;
+    margin-left: 5px;
+  }
+}
+.address-delivery-new .act-show:after {
+  content: $lnir-circle-plus !important;
+}
+
+.account-history {
+  .header {
+    padding: 0 !important;
+  }
+  .history-item.row {
+    padding: 2rem 1rem !important;
+    margin: 0 0 1rem 0 !important;
+
+    .account-history-order + .account-history-order {
+      display: none !important;
+    }
+  }
+  .account-history-order {
+    border-top: 1px solid $light;
+    margin-top: 2rem !important;
+  }
+  .account-history-order,
+  .common-summary-address,
+  .common-summary-service {
+    .header,
+    .content {
+      margin: 0 0 1rem 0 !important;
+      padding: 0 !important;
+    }
+  }
+  .item {
+    margin-bottom: 1rem;
+  }
+  .name {
+    font-weight: 700;
+  }
+  .action .btn {
+    max-width: none !important;
+    margin-top: 0 !important;
+  }
+  .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-close {
+    padding: 1rem !important;
+    text-align: center;
+  }
+}
+.aimeos .common-summary-service .item h4 {
+  margin-top: 0 !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+}

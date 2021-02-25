@@ -1,0 +1,172 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+lib.contentElement.settings.responsiveimages.variants.default.width = 2200
+lib.contentElement.settings.responsiveimages.variants.large.width = 1200
+lib.contentElement.settings.responsiveimages.variants.medium.width = 1200
+lib.contentElement.settings.responsiveimages.variants.small.width = 1000
+lib.contentElement.settings.responsiveimages.variants.extrasmall.width = 750
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:girard/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+	matchHeight = EXT:girard/Resources/Public/JavaScript/Dist/matchheight.min.js
+      girard_scripts = EXT:girard/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+page.headerData.998 = TEXT
+page.headerData.998.value(
+	<script type="application/javascript" src="https://app.usercentrics.eu/latest/main.js" id="v65iOazo"></script>
+)	
+
+page.headerData.999 = TEXT
+page.headerData.999.value(
+	<script type="text/plain" data-usercentrics="Matomo">
+	  var _paq = window._paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//www.girard.at/analytics/";
+	    _paq.push(['setTrackerUrl', u+'matomo.php']);
+	    _paq.push(['setSiteId', '1']);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+)
+
+
+
+# ==============================================
+# FE-Plugin configuration for EXT:news
+# ==============================================
+plugin.tx_news {
+	
+
+	
+
+	# ====================================
+	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
+	# ====================================
+	settings {
+		list {
+			# media configuration
+			media {
+				image {
+					maxWidth = 600
+					maxHeight = 600
+				}
+
+				dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+			}
+
+			
+			
+		}
+
+	}	
+
+}
+
+
+///AIMEOS
+
+
+lib.navigation.basket = COA
+lib.navigation.basket.10 = USER
+lib.navigation.basket.10 {
+    # userFunc = tx_extbase_core_bootstrap->run
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    vendorName = Aimeos
+    extensionName = Aimeos
+    pluginName = basket-small
+    controller = Basket
+    action = small
+    settings =< plugin.tx_aimeos.settings
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.billing.mandatory {
+	0 = order.base.address.firstname
+	1 = order.base.address.lastname
+	
+	3 = order.base.address.address1
+	
+	5 = order.base.address.postal
+	6 = order.base.address.city
+      7 = order.base.address.email
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.billing.optional {
+	0 = order.base.address.countryid
+      2 = order.base.address.company
+      4 = order.base.address.address2
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.billing.hidden {
+      0 = order.base.address.salutation
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.countries {
+	0 = AT
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.mandatory {
+	0 = order.base.address.firstname
+	1 = order.base.address.lastname
+      2 = order.base.address.email
+	3 = order.base.address.company
+	4 = order.base.address.address1
+	
+	6 = order.base.address.postal
+	7 = order.base.address.city
+      
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.optional {
+	
+      5 = order.base.address.address2
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.hidden {
+      0 = order.base.address.countryid
+}
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.order.account.standard.groupids = 3
+
+
+lib.greeting = COA_INT
+lib.greeting {
+   10 = TEXT
+      10.data = TSFE:fe_user|user|first_name
+      10.noTrimWrap = |Hallo |!
+      10.outerWrap = <span class="greeting">|</span>
+}
+
+plugin.tx_aimeos.settings.client.html.catalog.selection.type.color = radio
+plugin.tx_aimeos.settings.client.html.catalog.selection.type.size = radio
+
+
+plugin.tx_aimeos.settings.client.html.basket.standard.url.target = 147
+plugin.tx_aimeos.settings.client.jsonapi.url.target = 131

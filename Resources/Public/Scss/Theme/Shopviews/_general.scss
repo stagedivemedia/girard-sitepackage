@@ -1,0 +1,66 @@
+.aimeos h1,
+.aimeos h2 {
+      text-transform: none !important;
+}
+
+.aimeos.aimeos-container h4 {
+      font-size: 20px !important;
+      color: $dark !important;
+      letter-spacing: 1px !important;
+      margin-bottom: 1rem !important;
+      font-weight: bold !important;
+}
+
+.aimeos .error-list {
+      color: #dc3545;
+}
+
+.btn-close {
+      color: white !important;
+      font-size: 0 !important;
+      &:before {
+            color: $dark !important;
+            text-indent: 0px;
+            font-size: 20px !important;
+            content: $lnir-close !important;
+            display: inline-block;
+            font: normal normal normal 1em/1 'LineIconsPro Regular';
+            //speak: none;
+            text-transform: none;
+            /* Better Font Rendering */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+      }
+      &:hover {
+            &:before {
+                  color: $primary !important;
+            }
+      }
+}
+
+.aimeos .btn {
+      width: auto !important;
+}
+
+.account-profile h1.header,
+.account-review h1.header,
+.account-watch .header,
+.account-history .header,
+.account-favorite .header,
+.account-subscription .header,
+.basket-related-bought .header,
+.catalog-session .header,
+.catalog-detail .header {
+      border-bottom: none !important;
+      text-transform: none !important;
+}
+
+.account-watch .modify,
+.account-favorite .modify,
+.catalog-session-pinned .modify {
+      position: static !important;
+}
+
+.pagination {
+      display: none !important;
+}

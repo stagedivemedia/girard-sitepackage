@@ -1,0 +1,32 @@
+.backendlayout-shop_start {
+      .nav-wrapper{
+            width:100%;
+            padding-left:2rem;
+            margin-left:2rem;
+            border-left:1px solid #d4d4d4;
+            display:flex;
+            .navbar-nav{
+                  flex-direction: row;
+            }
+
+      }
+      .shopheader {
+            > .frame {
+                  min-height: 80vh;
+                  display: flex;
+                  align-items: center;
+            }
+            .textpic {
+                  max-width: 50%;
+                  margin-right: 0;
+                  margin-left: auto;
+            }
+            .image {
+                  width: 60%;
+            }
+      }
+      .catalog-list-items .list-items {
+            display: flex;
+            justify-content: center;
+      }
+}

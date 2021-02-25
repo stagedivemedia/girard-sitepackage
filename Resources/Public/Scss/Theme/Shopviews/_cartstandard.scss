@@ -1,0 +1,262 @@
+.aimeos-overlay {
+      background-color: #000 !important;
+      z-index: 1040 !important;
+}
+
+.aimeos-container {
+      z-index: 1050 !important;
+      padding: 40px !important;
+      max-width: 1620px !important;
+}
+
+.aimeos.basket-standard,
+.basket {
+      .button-group {
+            margin-top: 3rem;
+      }
+      .basket {
+            margin: 0 !important;
+            padding: 0 !important;
+      }
+      .cart-summary {
+            align-items: flex-end;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+      }
+      .header {
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+      }
+      .product.row {
+            padding: 20px 0;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            border-bottom: 1px solid $light;
+            margin-right: 0 !important;
+            align-items: center;
+            color: $dark !important;
+            > div {
+                  line-height: 30px;
+            }
+            .attr-list {
+                  margin-top: 0 !important;
+                  margin-bottom: 0 !important;
+                  .name {
+                        font-weight: 700;
+                  }
+                  .attr-item span {
+                        color: $dark !important;
+                        opacity: 0.5;
+                  }
+                  .attr-item {
+                        display: inline-block !important;
+                        line-height: 1.5rem;
+                  }
+            }
+      }
+      .image.details {
+            display: flex;
+            align-items: center;
+      }
+      .cart-summary-right {
+            background: $light;
+            padding: 20px;
+      }
+
+      .basket-standard-coupon {
+            display: block !important;
+            text-align: left;
+            padding: 0 !important;
+            .content {
+                  width: 100%;
+            }
+            .coupon-label {
+                  display: block;
+                  margin-bottom: 5px;
+                  margin-top: 1rem;
+                  font-size: 14px !important;
+            }
+            .coupon-new input,
+            .coupon-new button {
+                  padding: 1rem 2.75rem;
+                  width: 50% !important;
+                  height: auto !important;
+            }
+            .input-group {
+                  border: none !important;
+                  align-items: stretch;
+            }
+            .form-control.coupon-code {
+                  display: block;
+                  margin-right: 5px;
+                  border: 1px solid $light !important;
+            }
+            .attr-list {
+                  width: 100%;
+                  margin: 10px 0;
+                  display: block;
+                  .minibutton:after {
+                        font-size: 20px !important;
+                  }
+                  .attr-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .coupon-code {
+                              font-weight: 400;
+                              padding: 0;
+                              &:before {
+                                    content: $lnir-checkmark-circle !important;
+                                    display: inline-block;
+                                    font: normal normal normal 1em/1
+                                          'LineIconsPro Regular';
+                                    //speak: none;
+                                    text-transform: none;
+                                    /* Better Font Rendering */
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                    color: #8dcc78;
+                                    margin-right: 5px;
+                              }
+                        }
+                  }
+            }
+      }
+      .head-labels {
+            font-weight: 700;
+            margin-right: 0 !important;
+            border-bottom: 1px solid $light;
+            padding-bottom: 15px;
+      }
+
+      .code {
+            display: none;
+      }
+
+      .cart-list .product:last-child {
+            margin-bottom: 0 !important;
+      }
+      .product-name {
+            color: $dark !important;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 0 !important;
+            &:hover {
+                  color: $primary !important;
+                  text-decoration: none;
+            }
+      }
+
+      .quantity {
+            display: flex;
+            align-items: center;
+            input {
+                  width: auto;
+                  border: none;
+                  padding: 0.5rem 1rem;
+                  text-indent: 0;
+                  max-width: 60px;
+                  height: 30px;
+                  text-align: center;
+            }
+            .minibutton.change {
+                  border: 1px solid $dark;
+                  color: $primary;
+                  min-width: 30px;
+                  height: 30px;
+                  border-radius: 15px;
+                  display: block;
+                  text-align: center;
+                  &:hover {
+                        text-decoration: none;
+                        background-color: $dark;
+                  }
+            }
+            .minus-placeholder {
+                  min-width: 30px;
+                  height: 30px;
+                  display: block;
+            }
+            .minus {
+                  &:before {
+                        content: $lnir-minus !important;
+                        display: inline-block;
+                        font: normal normal normal 1em/1 'LineIconsPro Regular';
+                        //speak: none;
+                        text-transform: none;
+                        /* Better Font Rendering */
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                  }
+                  font-size: 14px;
+                  line-height: 30px;
+            }
+            .plus {
+                  &:before {
+                        content: $lnir-plus !important;
+                        display: inline-block;
+                        font: normal normal normal 1em/1 'LineIconsPro Regular';
+                        //speak: none;
+                        text-transform: none;
+                        /* Better Font Rendering */
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                  }
+                  font-size: 14px;
+                  line-height: 30px;
+            }
+      }
+      .delete {
+            color: rgba(black, 30%) !important;
+            &:hover {
+                  color: $primary !important;
+            }
+      }
+
+      .low-row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+      }
+
+      img.detail {
+            width: 100px !important;
+            height: 100px !important;
+            max-width: none !important;
+            max-height: none !important;
+
+            overflow: initial !important;
+      }
+}
+
+.cart-summary-right {
+      .subtotal,
+      .delivery,
+      .total,
+      .tax {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.2rem 0;
+      }
+      .action {
+            display: none;
+      }
+      .total {
+            font-weight: 700;
+            padding-bottom: 0;
+            padding-top: 1rem;
+            border-top: 1px solid #c4cad0;
+      }
+      .tax {
+            padding-top: 0;
+            font-size: 13px;
+            opacity: 0.5;
+      }
+      .delivery {
+            margin-bottom: 1rem;
+      }
+}
+
+.basket:before {
+      display: none;
+      content: '';
+}

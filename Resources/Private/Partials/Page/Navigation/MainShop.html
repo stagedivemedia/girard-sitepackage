@@ -1,0 +1,164 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
+<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
+<header id="page-header" class="{headerClass} qpwifjnwerifjn ">
+    <div class="container-fluid">
+          <div class="logo-wrapper">
+                  <f:link.page pageUid="{rootPage}" class="navbar-brand navbar-brand-{f:if(condition: logo.normal, then: 'image', else: 'text')}" title="{settings.logo.linktitle}">
+                        <f:if condition="{logo.normal}">
+                              <f:then>
+                                    <img class="navbar-brand-logo-normal" src="{f:uri.image(image: logo.normal)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
+                                    <f:if condition="{logo.inverted}">
+                                          <img class="navbar-brand-logo-inverted" src="{f:uri.image(image: logo.inverted)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
+                                    </f:if>
+                              </f:then>
+                              <f:else>
+                                    <span>{siteTitle}</span>
+                              </f:else>
+                        </f:if>
+                  </f:link.page>
+                 <div class="clicino-logo">
+                        <a href="/">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="313" height="69.81" viewBox="0 0 313 69.81">
+                                    <defs>
+                                          <style>
+                                                .a {
+                                                      mix-blend-mode: multiply;
+                                                      isolation: isolate;
+                                                }
+                              
+                                                .b {
+                                                      fill: #181716;
+                                                }
+                              
+                                                .c {
+                                                      fill: #fff;
+                                                      stroke: #e8e8e8;
+                                                }
+                              
+                                                .d {
+                                                      fill: #e63434;
+                                                }
+                              
+                                                .e {
+                                                      stroke: none;
+                                                }
+                              
+                                                .f {
+                                                      fill: none;
+                                                }
+                                          </style>
+                                    </defs>
+                                    <g transform="translate(-730 -1422)">
+                                          <g transform="translate(730 1422)">
+                                                <g class="a">
+                                                      <path class="b" d="M240.27,48.24V40.81c0-6.35,1.84-10.41,7.46-10.41s7.45,4.06,7.45,10.41v7.45c0,6.36-1.93,10.41-7.45,10.41s-7.46-4-7.46-10.41m-13.07.47c0,13.16,8.65,21.08,20.53,21.08s20.53-7.92,20.53-21.08v-8.4c0-13.17-8.66-21.08-20.53-21.08S227.2,27.16,227.2,40.33ZM176.84,68.59h13.07V39.96c0-6.35,2.58-9.58,6.72-9.58s6.54,3.23,6.54,9.58V68.59h13.16V39.5c0-13.26-8.93-20.25-19.7-20.25s-19.79,7-19.79,20.25Zm-25.59,0h13.16V20.44H151.25ZM104.94,48.71c0,14.91,9,21.08,21.27,21.08a48,48,0,0,0,14.17-2.3l-2.85-10.68a38.3,38.3,0,0,1-10.59,1.84c-5.52,0-8.83-2.4-8.83-9.94V40.33c0-7.55,3.31-9.95,8.83-9.95a38,38,0,0,1,10.59,1.85l2.76-10.68a46.52,46.52,0,0,0-14.08-2.3c-12.25,0-21.27,6.16-21.27,21.08ZM80.45,68.59H93.62V20.44H80.45Zm-26,0H67.57V0L54.4,1.81ZM40.78,55.81A46.25,46.25,0,0,1,25.49,58.3c-7.36,0-12-4-12-15.28V31.86c0-11.23,4.6-15.19,12-15.19a51.62,51.62,0,0,1,15.29,2.39l2.58-11a57.484,57.484,0,0,0-18-2.86C10.86,5.16,0,13.54,0,30.75V44.19C0,61.41,10.86,69.81,25.4,69.81a57.482,57.482,0,0,0,18-2.86Z" />
+                                                      <path class="b" d="M248.08,15.81c5.49,0,10.11,2.14,10.11-1.81,0-4.14-4.75-5.81-10.11-5.81S238,9.86,238,14s4.58,1.81,10.08,1.81" />
+                                                </g>
+                                          </g>
+                                          <g class="c" transform="translate(1010 1431)">
+                                                <circle class="e" cx="16" cy="16" r="16" />
+                                                <circle class="f" cx="16" cy="16" r="16.5" />
+                                          </g>
+                                          <path class="d" d="M22,32A16.005,16.005,0,0,1,7.163,22H36.837A16.006,16.006,0,0,1,22,32ZM36.837,10H7.163a16.006,16.006,0,0,1,29.673,0Z" transform="translate(1004 1431)" />
+                                    </g>
+                              </svg>
+                        </a>
+                 </div>
+          </div>
+        
+        <div class="nav-wrapper">
+            <f:if condition="{mainnavigation}">
+                  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainnavigation" aria-expanded="false" aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <nav id="mainnavigation" class="collapse navbar-collapse">
+                        <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
+                        <f:render section="MainNavigation" arguments="{menu: mainnavigation, theme: theme}" />
+                        <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
+                  </nav>
+            </f:if>
+            <div class="toplinks">
+                  <div class="infonav">
+
+                  </div>
+                 
+
+                  <span class="toplink-tag cart">
+                        <section class="aimeos basket-mini ewrgf">
+                                    <f:if condition="{f:cObject(typoscriptObjectPath:'lib.navigation.basket')}">
+                                        <f:cObject typoscriptObjectPath="lib.navigation.basket" />
+                                    </f:if>
+                        </section>
+                  </span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<f:section name="MainNavigation">
+    <f:if condition="{menu}">
+        <ul class="navbar-nav">
+            <f:for each="{menu}" as="item">
+                <f:if condition="{item.spacer}">
+                    <f:then>
+                        </ul>
+                        <ul class="navbar-nav">
+                    </f:then>
+                    <f:else>
+                        <li class="nav-item{f:if(condition: item.active, then:' active')}{f:if(condition: item.children, then:' dropdown dropdown-hover')}">
+                            <a href="{item.link}" id="nav-item-{item.data.uid}" class="nav-link{f:if(condition: item.children, then:' dropdown-toggle')}"{f:if(condition: item.target, then: ' target="{item.target}"')} title="{item.title}"{f:if(condition: item.children, then:' aria-haspopup="true" aria-expanded="false"')}>
+                                <f:if condition="{theme.navigation.icon.enable} && {item.icon}">
+                                    <span class="nav-link-icon">
+                                        <f:if condition="{item.icon.0.extension} === svg">
+                                            <f:then>
+                                                <bk2k:inlineSvg image="{item.icon.0}" width="{theme.navigation.icon.width}" height="{theme.navigation.icon.height}" />
+                                            </f:then>
+                                            <f:else>
+                                                <f:image additionalAttributes="{loading: 'lazy'}" image="{item.icon.0}" alt="{item.icon.0.alternative}" title="{item.icon.0.title}" width="{theme.navigation.icon.width}" height="{theme.navigation.icon.height}" />
+                                            </f:else>
+                                        </f:if>
+                                    </span>
+                                </f:if>
+                                <span class="nav-link-text">{item.title}<f:if condition="{item.current}"> <span class="sr-only">(current)</span></f:if></span>
+                            </a>
+                            <f:if condition="{item.children}">
+                                <ul class="dropdown-menu" aria-labelledby="nav-item-{item.data.uid}">
+                                    <f:for each="{item.children}" as="child">
+                                        <f:if condition="{child.spacer}">
+                                            <f:then>
+                                                <li class="dropdown-divider"></li>
+                                            </f:then>
+                                            <f:else>
+                                                <li>
+                                                    <a href="{child.link}" class="dropdown-item{f:if(condition: child.active, then:' active')}"{f:if(condition: child.target, then: ' target="{child.target}"')} title="{child.title}">
+                                                        <f:if condition="{theme.navigation.dropdown.icon.enable} && {child.icon}">
+                                                            <span class="dropdown-icon">
+                                                                <f:if condition="{child.icon.0.extension} === svg">
+                                                                    <f:then>
+                                                                        <bk2k:inlineSvg image="{child.icon.0}" width="{theme.navigation.dropdown.icon.width}" height="{theme.navigation.dropdown.icon.height}" />
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <f:image additionalAttributes="{loading: 'lazy'}" image="{child.icon.0}" alt="{child.icon.0.alternative}" title="{child.icon.0.title}" width="{theme.navigation.dropdown.icon.width}" height="{theme.navigation.dropdown.icon.height}" />
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </span>
+                                                        </f:if>
+                                                        <span class="dropdown-text">{child.title}<f:if condition="{child.current}"> <span class="sr-only">(current)</span></f:if></span>
+                                                    </a>
+                                                </li>
+                                            </f:else>
+                                        </f:if>
+                                    </f:for>
+                                </ul>
+                            </f:if>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+</html>

@@ -1,0 +1,32 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+            layout.addItems {
+                  5 = Shop Layout
+            }
+    }
+    tt_content {
+		frame_class.addItems {
+			text-in-image = Text in Bild
+			logoleiste = Logoleiste
+			small-top-spacing = Top-Spacing kleiner
+			small-bottom-spacing = Bottom-Spacing kleiner
+			zero-top-spacing = Top-Spacing entfernen
+			zero-bottom-spacing = Bottom-Spacing entfernen
+			formcontact-box = Kontaktbox
+			testimonial-g = Google Testimonial
+			testimonial-F = Facebook Testimonial
+		}
+		layout.addItems {
+		  logoleiste = Logoleiste
+		  grey-box = Graue Box
+		  dates = Termine
+		  rainbow = Regenbogen
+		  border = Rahmen geben
+		  clicino = Clicino
+		  referenten = Referenten
+		}
+    }
+}

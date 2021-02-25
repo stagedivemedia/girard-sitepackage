@@ -1,0 +1,48 @@
+.account-favorite {
+  .favorite-items-custom {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    .favorite-item-custom {
+      margin: 0 10px !important;
+    }
+  }
+
+  .media-item {
+    height: 200px !important;
+    width: 200px !important;
+    margin-bottom: 1rem;
+  }
+  a {
+    text-decoration: none !important;
+    color: $dark !important;
+    .name {
+      text-transform: none !important;
+      font-weight: 700 !important;
+      height: auto !important;
+      font-size: 18px;
+      margin-bottom: 0.5rem;
+    }
+    .value:before {
+      content: "ab";
+    }
+    .taxrate-custom {
+      font-size: 12px !important;
+      opacity: 0.5;
+      line-height: 1 !important;
+    }
+    .price-bottom-line {
+      line-height: 1;
+    }
+  }
+  .modify {
+    margin: 1rem auto 0 auto;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+    &:before {
+      font-size: 100% !important;
+    }
+  }
+}
