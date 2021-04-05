@@ -63,10 +63,6 @@ page.headerData.999.value(
 # FE-Plugin configuration for EXT:news
 # ==============================================
 plugin.tx_news {
-	
-
-	
-
 	# ====================================
 	# Settings available inside Controller and View by accessing $this->settings or {settings.xyz}
 	# ====================================
@@ -80,6 +76,19 @@ plugin.tx_news {
 				}
 
 				dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+			}
+
+			
+			
+		}
+
+		detail {
+			# media configuration
+			media {
+				image {
+					maxWidth = 600
+					maxHeight = 600
+				}
 			}
 
 			
