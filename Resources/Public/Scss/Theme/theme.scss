@@ -1082,6 +1082,32 @@ fieldset {
       bottom: 20px;
 }
 
+.gridelement{
+      max-width: $container-max-width;
+      margin: 0 auto;
+}
+
+
+.news .article .news-img-wrap, .news .article .news-img-wrap img, .news .article .news-img-wrap a{
+      float:none !important; 
+      width:100% !important;
+      margin:0;
+      border:0;
+      padding:0;
+}
+
+.news-list-view{
+      .footer{
+            display:none;
+      }
+}
+
+.news-single .teaser-text{
+      font-size: 1.3rem !important;
+      margin-top: 2rem !important;
+      margin-bottom: 2rem !important;
+      color: #2b2b2b !important;
+}
 /////SHOPVIEWS
 
 @import 'clickershop';
