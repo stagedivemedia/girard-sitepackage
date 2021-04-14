@@ -7,6 +7,7 @@
 ############
 ### PAGE ###
 ############
+config.no_cache = 1
 page {
     logo {
         file = EXT:girard/Resources/Public/Images/logo.svg
@@ -38,7 +39,28 @@ page {
     }
 }
 
+plugin.bootstrap_package.settings.scss {
+    primary = #cc0033
+    secondary = #4DB056
+}
+
+page.theme.copyright.text = ©2020 Brigitte Girard / Therapiehunde mit Herz – Alle Rechte vorbehalten
+page.theme.language.enable = 0
+page.theme.navigation.style = default
+page.theme.navigation.type = top
+page.theme.meta.enable = 0
+page.theme.socialmedia.channels.facebook.url = https://www.facebook.com/Therapiehunde-mit-Herz-110819080391057/
+page.theme.cookieconsent.position = bottom-right
+page.preloader.backgroundColor = #fff
+
+page.preloader.logo.file = EXT:girard/Resources/Public/Images/logo.svg
+page.logo.height = 130
+
 //NEWS
+
+plugin.tx_news.view.layoutRootPath = EXT:girard/Resources/Private/Extensions/News/Layouts/
+plugin.tx_news.view.partialRootPath = EXT:girard/Resources/Private/Extensions/News/Partials/
+plugin.tx_news.view.templateRootPath = EXT:girard/Resources/Private/Extensions/News/Templates/
 
 
 ##################

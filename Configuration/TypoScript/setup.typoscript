@@ -3,9 +3,6 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 
-
-config.no_cache = 1
-
 lib.contentElement.settings.responsiveimages.variants.default.width = 2200
 lib.contentElement.settings.responsiveimages.variants.large.width = 1200
 lib.contentElement.settings.responsiveimages.variants.medium.width = 1200
