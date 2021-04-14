@@ -4,7 +4,7 @@
 mod {
     web_layout {
         BackendLayouts {
-            shop_start {
+            shop_start_new {
                 title = Shop Startseite
                 config {
                     backend_layout {
