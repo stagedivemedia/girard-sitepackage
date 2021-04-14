@@ -86,6 +86,11 @@ plugin.bootstrap_package_contentelements {
     }
 }
 
+//NEWS
+
+plugin.tx_news.view.layoutRootPath = EXT:girard/Resources/Private/Extensions/News/Layouts/
+plugin.tx_news.view.partialRootPath = EXT:girard/Resources/Private/Extensions/News/Partials/
+plugin.tx_news.view.templateRootPath = EXT:girard/Resources/Private/Extensions/News/Templates/
 
 
 
