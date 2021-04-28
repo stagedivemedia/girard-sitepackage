@@ -1,32 +1,318 @@
-.backendlayout-shop_start {
-      .nav-wrapper{
-            width:100%;
-            padding-left:2rem;
-            margin-left:2rem;
-            border-left:1px solid #d4d4d4;
-            display:flex;
-            .navbar-nav{
-                  flex-direction: row;
-            }
+.backendlayout-special_feature {
+  .nav-wrapper {
+    width: 100%;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    border-left: 1px solid #d4d4d4;
+    display: flex;
+    .navbar-nav {
+      flex-direction: row;
+    }
+  }
+  .shopheader {
+    > .frame {
+      padding-bottom: 0px !important;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      @include media-breakpoint-down(md) {
+        display: block;
+        padding-top: 0 !important;
 
+        .frame-backgroundimage-container {
+          margin-bottom: 3rem !important;
+          height: 50vh;
+          position: static;
+          .frame-backgroundimage {
+            background-size: cover;
+            position: static;
+          }
+        }
+        .frame-container {
+          .image {
+            width: 100% !important;
+          }
+        }
       }
-      .shopheader {
-            > .frame {
-                  min-height: 80vh;
-                  display: flex;
-                  align-items: center;
-            }
-            .textpic {
-                  max-width: 50%;
-                  margin-right: 0;
-                  margin-left: auto;
-            }
-            .image {
-                  width: 60%;
-            }
+    }
+    .textpic {
+      max-width: 50%;
+      margin-right: 0;
+      margin-left: auto;
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
       }
-      .catalog-list-items .list-items {
-            display: flex;
-            justify-content: center;
+    }
+    .image {
+      width: 60%;
+    }
+  }
+  .catalog-list-items .list-items {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.basket-standard h3,
+.checkout-standard-address h3,
+.checkout-standard-delivery h4,
+.checkout-standard-payment h3,
+.checkout-standard-summary.common-summary h3,
+.checkout-confirm-detail h4,
+.checkout-confirm-basic h4 {
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+}
+
+.basket-standard h4,
+.checkout-standard-address h4,
+.cart-summary h4 {
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  color: $primary !important;
+}
+
+.checkout-standard-summary.common-summary h4,
+body .aimeos .common-summary-service .item .header h4 {
+  font-weight: 700 !important;
+}
+.checkout-confirm .confirm-soacial-row div:last-child {
+  width: calc(100% / 3) !important;
+}
+
+.danke-bild {
+  width: 100%;
+}
+
+.shopheader {
+  .frame-backgroundimage {
+    background-position: left;
+  }
+}
+.backendlayout-special_feature {
+  @include media-breakpoint-down(md) {
+    .nav-wrapper {
+      position: relative;
+      padding: 1rem !important;
+      border-top: 1px solid $border-color;
+      margin-left: 0 !important;
+      justify-content: space-between;
+      border-left: none !important;
+      #mainnavigation {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        //bottom: 0;
+        .navbar-nav {
+          padding: 0 1rem;
+          display: block !important;
+        }
       }
+    }
+    .clicino-logo,
+    .navbar-brand-image {
+      svg,
+      img {
+        max-width: 100%;
+      }
+      svg {
+        max-height: 35px;
+      }
+    }
+    #page-header .container-fluid {
+      padding: 0 !important;
+    }
+    .logo-wrapper {
+      padding: 0 1rem;
+    }
+    .navbar-transition {
+      @include transition();
+      top: -70px !important;
+    }
+    .shopheader {
+      margin-top: 66px;
+    }
+    .backendlayout-special_feature .shopheader .image {
+      width: 100%;
+      margin-top: 3rem;
+    }
+    .backendlayout-special_feature .list-items .product {
+      width: calc(100% - 20px) !important;
+    }
+    .list-items .product {
+      width: 100% !important;
+    }
+    ////DETAIL FIXES Responsive
+
+    .catalog-detail {
+      .product-stage {
+        padding-top: 0;
+      }
+      .catalog-detail-image .image-single .media-item,
+      .catalog-detail-image .image-single {
+        height: 250px;
+      }
+      .catalog-detail-image .image-single img {
+        width: 250px;
+      }
+      .product-stage .catalog-detail-basic h1.name {
+        font-size: 2rem !important;
+        letter-spacing: 0 !important;
+        padding-bottom: 0;
+      }
+      .catalog-detail-basket {
+        margin-top: 0;
+      }
+      .product-stage .price-item:last-child {
+        margin-top: 10px !important;
+        padding: 10px 20px !important;
+        .value {
+          font-size: 1.3rem !important;
+        }
+      }
+      .catalog-detail-basket .selection .radio .select-label {
+        padding: 0.2rem;
+      }
+      #select-color .select-entry {
+        margin-right: 5px !important;
+        margin-bottom: 5px;
+      }
+
+      .addbasket .input-group {
+        display: block !important;
+        input {
+          width: 100% !important;
+          text-align: left !important;
+        }
+        .btn {
+          width: 100% !important;
+          margin-top: 5px;
+        }
+      }
+      .stock-list {
+        padding: 0 !important;
+      }
+      .catalog-detail-basket-attribute,
+      .selection,
+      .addbasket {
+        margin: 0 !important;
+      }
+    }
+    .aimeos-container.aimeos {
+      padding: 20px !important;
+    }
+    .basket-standard .product.row,
+    .basket .product.row {
+      .image.details {
+        min-width: 100% !important;
+      }
+      .col {
+        padding: 0 10px !important;
+      }
+      .action {
+        min-width: 100% !important;
+        margin-top: 10px;
+      }
+      .price,
+      .unitprice {
+        text-align: right;
+      }
+    }
+    .basket-standard .image.details,
+    .basket .image.details {
+      padding: 0 !important;
+      margin-bottom: 10px;
+      .attr-list {
+        line-height: 1rem !important;
+      }
+      .product-name {
+        margin-bottom: 0 !important;
+      }
+      .attr-item {
+        margin-bottom: 0 !important;
+      }
+    }
+    .head-labels {
+      //display:none;
+      .price,
+      .unitprice {
+        text-align: right;
+      }
+      .details {
+        display: none;
+      }
+      .quantity {
+        min-width: 50%;
+        display: block !important;
+      }
+    }
+    .minibutton.delete:before {
+      content: "löschen";
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    .cart-summary {
+      display: block !important;
+    }
+    .row.low-row {
+      .basket-standard-coupon {
+        min-width: 100%;
+      }
+    }
+    .aimeos.basket-standard .basket-standard-coupon .form-control.coupon-code,
+    .basket .basket-standard-coupon .form-control.coupon-code {
+      padding: 0rem 1rem;
+      border: 1px solid $border-color !important;
+    }
+    .checkout-standard .steps .step:before {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font: normal normal normal 1rem/37px "LineIconsPro Regular";
+    }
+    .checkout-standard .checketiy:before {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font: normal normal normal 1rem/45px "LineIconsPro Regular";
+    }
+    .checkout-standard,
+    .checkout-confirm {
+      margin-top: -3rem;
+      .small-summary {
+        margin-top: 3rem;
+      }
+    }
+    .custom-delivery {
+      .option-left-wrapper {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+      .icon img {
+        max-width: 100%;
+      }
+      .service-topline {
+        display: block;
+      }
+    }
+    .steps .step {
+      font-size: 12px;
+    }
+    .confirm-soacial-row {
+      display: block !important;
+    }
+    .checkout-confirm .confirm-soacial-row div:last-child,
+    .checkout-confirm .confirm-soacial-row div {
+      width: 100% !important;
+    }
+    .checkout-confirm-basic .attr-list .name,
+    .checkout-confirm-basic .attr-list .value {
+      width: 50% !important;
+    }
+    .checkout-confirm-basic .form-item {
+      display: flex;
+    }
+  }
 }

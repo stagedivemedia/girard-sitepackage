@@ -8,7 +8,6 @@ $(document).ready(function() {
     checkInput();
 });
 
-
 function checkInput() {
       var empty = true
       $('.btn-add-to-cart').attr('disabled', 'disabled');
@@ -34,5 +33,4 @@ function checkInput() {
 
       
 }
-
-
+AimeosCatalogDetail.setupBlockPriceSlider = function() {}

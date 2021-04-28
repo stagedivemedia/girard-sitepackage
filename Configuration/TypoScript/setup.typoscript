@@ -133,7 +133,7 @@ plugin.tx_aimeos.settings.client.html.checkout.standard.address.billing.optional
 }
 
 plugin.tx_aimeos.settings.client.html.checkout.standard.address.billing.hidden {
-      0 = order.base.address.salutation
+      #0 = order.base.address.salutation
 }
 
 plugin.tx_aimeos.settings.client.html.checkout.standard.address.countries {
@@ -161,7 +161,11 @@ plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.hidden 
       0 = order.base.address.countryid
 }
 
-plugin.tx_aimeos.settings.client.html.checkout.standard.order.account.standard.groupids = 3
+plugin.tx_aimeos.settings.controller.frontend.customer.groupids = 4
+plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = 152
+
+plugin.tx_aimeos.settings.client.html.checkout.standard.order.account.standard.groupids = 4
+
 
 
 lib.greeting = COA_INT

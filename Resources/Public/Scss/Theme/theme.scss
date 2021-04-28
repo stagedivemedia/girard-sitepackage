@@ -79,7 +79,9 @@
                   url('../../../Public/Fonts/playfair-display-v15-latin-italic.svg#PlayfairDisplay')
                   format('svg'); /* Legacy iOS */
 }
-
+html{
+      scroll-behavior: smooth;
+}
 body,
 html {
       font-family: 'Catamaran';
