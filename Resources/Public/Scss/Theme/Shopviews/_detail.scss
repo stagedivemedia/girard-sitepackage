@@ -1,180 +1,203 @@
 .catalog-detail {
-      .product-stage {
-            .image-thumbs-custom {
-                  width: 100px;
-                  .item {
-                        width: 100px !important;
-                        height: 100px !important;
-                  }
-                  .item:not(.slick-current) {
-                        opacity: 0.3;
-                        @include medium-transition;
-                        &:hover {
-                              opacity: 1;
-                        }
-                  }
-            }
-
-            .catalog-detail-image {
-                  display: flex;
-                  flex-direction: row-reverse;
-                  &:active,
-                  &:focus {
-                        border: none !important;
-                  }
-                  * {
-                        &:active,
-                        &:focus {
-                              border: none !important;
-                        }
-                  }
-            }
-            .slick-slide:focus {
-                  border: none !important;
-            }
-
-            .slick-slide:active {
-                  border: none !important;
-            }
-
-            .catalog-detail-basic {
-                  h1 {
-                        font-weight: 700;
-                        font-size: 3rem !important;
-                        color: $dark !important;
-                        letter-spacing: 2px;
-                  }
-                  .code {
-                        display: none;
-                  }
-            }
-            .price-list{
-                  display:block !important;
-            }
-            .catalog-list-items .price-actual, .catalog-detail-basket .price-actual{
-                  display:block;
-                  
-            }
-            .price-item {
-                  display:block !important;
-                  .value {
-                        font-size: 2rem;
-                        display: block !important;
-                        color: $primary;
-                        margin: 0 !important;
-
-                  }
-            }
-            .price-item:last-child{
-                  background:$light;
-                  display:block;
-                  padding:20px;
-                  margin-top:2rem;
-                  .quantity:after{
-                        content: " Stk.";
-                  }
-                  .value{
-                        font-weight:700;
-                        line-height:1;
-                        color:$dark;
-                  }
-                  .catalog-detail-service{
-                        display:none;
-                  }
-            }
-            .catalog-detail-basket .price-item:first-of-type:after{
-                  display:none;
-                  content:"";
-            }
-            .catalog-detail-basket .price-item.toggle-js:first-of-type:after {
-                  display: none !important;
-            }
-            .catalog-detail-service{
-                  text-decoration:underline;
-            }
-            .taxrate-custom,
-            .catalog-detail-service,
-            .value {
-                  cursor: default;
-            }
-
-            .stock-actual .stockitem {
-                  display: flex !important;
-                  align-items: center !important;
-                  margin: 0;
-            }
-
-            .stocklevel,
-            .stocktext {
-                  display: inline-block !important;
-            }
-
-            .stocktext {
-                  line-height: 1rem;
-                  color: rgba($dark, 50%);
-            }
-            .stocklevel {
-                  margin-right: 10px;
-                  border-radius: 50%;
-            }
-            .stock-unlimited .stocklevel,
-            .stock-high .stocklevel {
-                  background-color: #8dcc78 !important;
-            }
-
-            .actions-button-custom {
-                  &:before {
-                        color: #ec7b7b;
-                        content: $lnir-heart !important;
-                        display: inline-block;
-                        font: normal normal normal 1em/1 'LineIconsPro Regular';
-                        //speak: none;
-                        text-transform: none;
-                        /* Better Font Rendering */
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                        font-size: 20px !important;
-                        margin-right: 5px;
-                        position: relative;
-                        top: 2px;
-                  }
-                  color: $dark !important;
-                  font-size: 13px;
-                  &:hover {
-                        color: $primary !important;
-                  }
-            }
-            .detail-top-row {
-                  display: flex;
-                  justify-content: space-between;
-            }
-            .content-description-custom {
-                  .long {
-                        padding: 1rem 0;
-                  }
-            }
+  .product-stage {
+    .image-thumbs-custom {
+      width: 100px;
+      .item {
+        width: 100px !important;
+        height: 100px !important;
       }
-      .additional-box {
-            display: none;
+      .item:not(.slick-current) {
+        opacity: 0.3;
+        @include medium-transition;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .catalog-detail-image {
+      display: flex;
+      flex-direction: row-reverse;
+      &:active,
+      &:focus {
+        border: none !important;
+      }
+      * {
+        &:active,
+        &:focus {
+          border: none !important;
+        }
+      }
+    }
+    .slick-slide:focus {
+      border: none !important;
+    }
+
+    .slick-slide:active {
+      border: none !important;
+    }
+
+    .catalog-detail-basic {
+      h1 {
+        font-weight: 700;
+        font-size: 3rem !important;
+        color: $dark !important;
+        letter-spacing: 2px;
+      }
+      .code {
+        display: none;
+      }
+    }
+    .price-list {
+      display: block !important;
+    }
+    .catalog-list-items .price-actual,
+    .catalog-detail-basket .price-actual {
+      display: block;
+    }
+    .price-item {
+      display: block !important;
+      .value {
+        font-size: 2rem;
+        //display: block !important;
+        color: $primary;
+        margin: 0 !important;
+      }
+    }
+    .price-actual {
+      background: $light;
+      padding: 1rem;
+    }
+    .price-actual > :nth-of-type(2) {
+      border-top: 1px solid #eaeaea;
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+    .price-actual > div:not(:first-of-type) {
+      span.value {
+        font-size: 1rem;
+        color: #555;
       }
       .price-bottom-line {
-            display: flex;
-            font-size: 13px;
-            color: #a4a4a4;
-            a {
-                  color: $dark !important;
-                  text-decoration: underline;
-                  &:hover {
-                        color: $primary !important;
-                  }
-            }
+        display: none;
       }
+      .quantity {
+        min-width: auto;
+        &:after {
+          content: " Stk. – ";
+        }
+      }
+    }
+    // .price-item:last-child{
+    //       background:$light;
+    //       display:block;
+    //       padding:20px;
+    //       margin-top:2rem;
+    //       .quantity:after{
+    //             content: " Stk.";
+    //       }
+    //       .value{
+    //             font-weight:700;
+    //             line-height:1;
+    //             color:$dark;
+    //       }
+    //       .catalog-detail-service{
+    //             display:none;
+    //       }
+    // }
+    .catalog-detail-basket .price-item:first-of-type:after {
+      display: none;
+      content: "";
+    }
+    .catalog-detail-basket .price-item.toggle-js:first-of-type:after {
+      display: none !important;
+    }
+    .catalog-detail-service {
+      text-decoration: underline;
+    }
+    .taxrate-custom,
+    .catalog-detail-service,
+    .value {
+      cursor: default;
+    }
+
+    .stock-actual .stockitem {
+      display: flex !important;
+      align-items: center !important;
+      margin: 0;
+    }
+
+    .stocklevel,
+    .stocktext {
+      display: inline-block !important;
+    }
+
+    .stocktext {
+      line-height: 1rem;
+      color: rgba($dark, 50%);
+    }
+    .stocklevel {
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .stock-unlimited .stocklevel,
+    .stock-high .stocklevel {
+      background-color: #8dcc78 !important;
+    }
+
+    .actions-button-custom {
+      &:before {
+        color: #ec7b7b;
+        content: $lnir-heart !important;
+        display: inline-block;
+        font: normal normal normal 1em/1 "LineIconsPro Regular";
+        //speak: none;
+        text-transform: none;
+        /* Better Font Rendering */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 20px !important;
+        margin-right: 5px;
+        position: relative;
+        top: 2px;
+      }
+      color: $dark !important;
+      font-size: 13px;
+      &:hover {
+        color: $primary !important;
+      }
+    }
+    .detail-top-row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .content-description-custom {
+      .long {
+        padding: 1rem 0;
+      }
+    }
+  }
+  .additional-box {
+    display: none;
+  }
+  .price-bottom-line {
+    display: flex;
+    font-size: 13px;
+    color: #a4a4a4;
+    a {
+      color: $dark !important;
+      text-decoration: underline;
+      &:hover {
+        color: $primary !important;
+      }
+    }
+  }
 }
 
 .frame-layout-product-detail {
-      > .frame-container {
-            max-width: 100%;
-      }
+  > .frame-container {
+    max-width: 100%;
+  }
 }
 
 .account-watch .media-item,
@@ -190,18 +213,18 @@
 .catalog-detail-bundle .media-list,
 .catalog-detail-suggest .media-list,
 .catalog-session-seen .media-list {
-      height: 320px !important;
+  height: 320px !important;
 }
 
 .catalog-detail .crossselling {
-      h2,
-      h3 {
-            text-align: left !important;
-      }
-      .catalog-actions {
-            float: none !important;
-            margin: 0 !important;
-      }
+  h2,
+  h3 {
+    text-align: left !important;
+  }
+  .catalog-actions {
+    float: none !important;
+    margin: 0 !important;
+  }
 }
 
 .account-watch,
@@ -212,60 +235,60 @@
 .catalog-detail-suggest,
 .catalog-session-seen,
 .catalog-session-pinned {
-      text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .btn-add-to-cart:after {
-      margin-left: 10px;
-      content: $lnir-cart-alt !important;
-      display: inline-block;
-      font: normal normal normal 1.5em/1 'LineIconsPro Regular';
-      //speak: none;
-      text-transform: none;
-      /* Better Font Rendering */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+  margin-left: 10px;
+  content: $lnir-cart-alt !important;
+  display: inline-block;
+  font: normal normal normal 1.5em/1 "LineIconsPro Regular";
+  //speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-add-to-cart:not(.disabled):hover {
-      background-color: $dark !important;
-      border-color: $dark !important;
+  background-color: $dark !important;
+  border-color: $dark !important;
 }
 
 .btn-add-to-cart.disabled {
-      cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 #select-color {
-      * {
-            transition: 0.2s all ease-in-out;
-      }
-      .select-entry {
-            margin-right: 10px;
-      }
-      label {
-            border-radius: 50%;
-      }
-      img {
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-      }
-      .select-option:checked + .select-label {
-            border-color: $primary;
-            background-color: $primary;
-      }
+  * {
+    transition: 0.2s all ease-in-out;
+  }
+  .select-entry {
+    margin-right: 10px;
+  }
+  label {
+    border-radius: 50%;
+  }
+  img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  .select-option:checked + .select-label {
+    border-color: $primary;
+    background-color: $primary;
+  }
 }
 
 #select-size {
-      * {
-            transition: 0.2s all ease-in-out;
-      }
-      .select-label {
-            padding: 0.7rem 1rem;
-      }
-      .select-option:checked + .select-label {
-            border-color: $primary;
-            background-color: $primary;
-      }
+  * {
+    transition: 0.2s all ease-in-out;
+  }
+  .select-label {
+    padding: 0.7rem 1rem;
+  }
+  .select-option:checked + .select-label {
+    border-color: $primary;
+    background-color: $primary;
+  }
 }

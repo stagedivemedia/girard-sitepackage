@@ -59,17 +59,28 @@
 .checkout-standard-payment h3,
 .checkout-standard-summary.common-summary h3,
 .checkout-confirm-detail h4,
-.checkout-confirm-basic h4 {
+.checkout-confirm-basic h4,
+.account-profile-address h3,
+.account-history-list h3 {
+  border-bottom: none !important;
   font-weight: 700 !important;
   font-size: 2rem !important;
 }
 
 .basket-standard h4,
 .checkout-standard-address h4,
-.cart-summary h4 {
+.cart-summary h4,
+.aimeos.account-profile h4,
+.account-history-order.common-summary h4 {
   font-weight: 700 !important;
   font-size: 1.3rem !important;
   color: $primary !important;
+  border-bottom: none !important;
+}
+
+.account-history-order.common-summary h5 {
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .checkout-standard-summary.common-summary h4,
@@ -164,13 +175,7 @@ body .aimeos .common-summary-service .item .header h4 {
       .catalog-detail-basket {
         margin-top: 0;
       }
-      .product-stage .price-item:last-child {
-        margin-top: 10px !important;
-        padding: 10px 20px !important;
-        .value {
-          font-size: 1.3rem !important;
-        }
-      }
+
       .catalog-detail-basket .selection .radio .select-label {
         padding: 0.2rem;
       }
@@ -314,5 +319,12 @@ body .aimeos .common-summary-service .item .header h4 {
     .checkout-confirm-basic .form-item {
       display: flex;
     }
+  }
+}
+
+.checkout-standard-delivery {
+  .item.item-service.row {
+    display: block !important;
+    margin-top: -1px !important;
   }
 }

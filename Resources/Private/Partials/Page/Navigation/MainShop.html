@@ -84,7 +84,23 @@
                   <div class="infonav">
 
                   </div>
-                 
+                  <f:security.ifAuthenticated>
+                        <f:then>
+                            <span class="topbar-user" href="/konto"><span class="lnir lnir-user-alt"></span>
+                            <div class="greetingWrap">
+                                    <f:cObject typoscriptObjectPath="lib.greeting" />
+                                    <a class="topbar-user" href="/konto">Zu deinem Konto</a>
+                            </div>
+                            </span>
+                        </f:then>
+                        <f:else>
+                            <span class="topbar-enter">
+                                    <span class="lnir lnir-enter"></span>
+                                    <a href="/login">Anmelden</a>
+                            </span>
+                            
+                        </f:else>
+                </f:security.ifAuthenticated>
 
                   <span class="toplink-tag cart">
                         <section class="aimeos basket-mini ewrgf">
