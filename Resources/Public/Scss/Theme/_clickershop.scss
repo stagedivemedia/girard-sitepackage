@@ -328,3 +328,16 @@ body .aimeos .common-summary-service .item .header h4 {
     margin-top: -1px !important;
   }
 }
+
+.catalog-detail .product-stage .catalog-detail-image {
+  display: block !important;
+}
+.catalog-detail .product-stage .image-thumbs-custom {
+  width: auto !important;
+}
+
+.gallery-item.gallery-item-size-6 {
+  @include media-breakpoint-up(xl) {
+    width: calc(100% / 8) !important;
+  }
+}

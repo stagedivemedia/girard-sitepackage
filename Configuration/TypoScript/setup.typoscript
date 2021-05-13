@@ -152,19 +152,20 @@ plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.mandato
       
 }
 
+
+
 plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.optional {
 	
       5 = order.base.address.address2
 }
 
-plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.hidden {
-      0 = order.base.address.countryid
-}
+// plugin.tx_aimeos.settings.client.html.checkout.standard.address.delivery.hidden {
+//       0 = order.base.address.countryid
+// }
 
-plugin.tx_aimeos.settings.controller.frontend.customer.groupids = 4
+
 plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = 152
-
-plugin.tx_aimeos.settings.client.html.checkout.standard.order.account.standard.groupids = 4
+plugin.tx_aimeos.settings.client.html.checkout.standard.order.account.standard.groupids.0 = 4
 
 
 

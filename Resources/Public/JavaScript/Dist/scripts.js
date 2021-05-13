@@ -6,6 +6,7 @@ $(document).ready(function() {
     $('.news-list-view .article .tease').matchHeight();
     $('.news-list-view .article .header').matchHeight();
     checkInput();
+    //callImageSlider();
 });
 
 function checkInput() {
@@ -34,3 +35,25 @@ function checkInput() {
       
 }
 AimeosCatalogDetail.setupBlockPriceSlider = function() {}
+
+
+function callImageSlider() {
+      $('.image-single').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.thumbs-custom',
+            infinite:false
+      }); 
+      $('.thumbs-custom').slick({
+            asNavFor: '.image-single',
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite:false,
+            //centerMode: true,
+            focusOnSelect: true
+      }); 
+
+}

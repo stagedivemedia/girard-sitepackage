@@ -1108,18 +1108,30 @@ fieldset {
 }
 
 #p120 .referenzen {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     background: $light;
     margin-top: 4rem;
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     margin-top: -6rem;
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    #c428 {
+      grid-column: 1 / span 2;
+    }
+    #c429 {
+      grid-column: 3 / span 2;
+    }
+    #c431 {
+      grid-column: 1 / span 3;
+    }
   }
   .frame {
     .frame-inner {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         background: white;
         box-shadow: 0px 10px 40px -20px #3333332e;
       }
@@ -1138,13 +1150,13 @@ fieldset {
   }
   .textpic {
     padding: 40px 80px 40px 40px;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       justify-content: center;
       p {
         text-align: center;
       }
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       flex-wrap: nowrap;
     }
     p:first-child {
